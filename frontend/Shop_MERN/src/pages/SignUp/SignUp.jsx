@@ -11,6 +11,7 @@ const SignUp = () => {
   const [name, setName] = useState('');
   const [visible, setVisible] = useState(false);
   const [avatar, setAvatar] = useState(null);
+  //   const navigate = useNavigate();
 
   const handleFileInputChange = e => {
     const file = e.target.files[0];
@@ -35,6 +36,10 @@ const SignUp = () => {
         config
       );
       console.log(response.data);
+      alert(response.message);
+      //   if (response.data.success === true) {
+      //     navigate('/');
+      //   }
     } catch (error) {
       console.error('Error:', error);
     }
