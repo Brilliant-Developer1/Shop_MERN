@@ -48,7 +48,7 @@ router.post('/create-user', upload.single('file'), async (req, res, next) => {
       });
       res.status(201).json({
         success: true,
-        message: `Please check your email: ${user.email} to activate your account!`,
+        message: `Please check your email:- ${user.email} to activate your account!`,
       });
     } catch (error) {
       return next(new ErrorHandler(error.message, 500));
