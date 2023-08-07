@@ -9,11 +9,7 @@ const ErrorHandler = require('./middleware/Error');
 app.use(express.json());
 app.use(cookieParser());
 // Allow requests from your frontend domain
-app.use(
-  cors({
-    origin: 'http://localhost:5173', // Replace with your frontend's URL
-  })
-);
+app.use(cors());
 app.use('/', express.static('uploads'));
 app.use(bodyParser.urlencoded({ extended: true, limit: '50mb' }));
 

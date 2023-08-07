@@ -8,7 +8,7 @@ const catchAsyncErrors = require('../middleware/catchAsyncErrors');
 const fs = require('fs');
 const jwt = require('jsonwebtoken');
 const sendMail = require('../utilities/sendMail');
-const { sendToken } = require('../utilities/JwtToken');
+const { sendToken } = require('../utilities/jwtToken');
 
 router.post('/create-user', upload.single('file'), async (req, res, next) => {
   try {
@@ -40,9 +40,7 @@ router.post('/create-user', upload.single('file'), async (req, res, next) => {
     };
 
     const activationToken = createActivationToken(user);
-    const activationUrl = `http://localhost:5173/activation/${encodeURIComponent(
-      activationToken
-    )}`;
+    const activationUrl = `http://localhost:5173/activation/${activationToken}`;
 
     try {
       await sendMail({
