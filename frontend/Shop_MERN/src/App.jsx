@@ -8,6 +8,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/sign-up" element={<SignUp />} />
+        {/* <Route path="/activation/:url" element={<Activation />} /> */}
       </Routes>
     </BrowserRouter>
   );

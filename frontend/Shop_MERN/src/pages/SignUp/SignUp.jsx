@@ -36,7 +36,7 @@ const SignUp = () => {
         config
       );
       console.log(response.data);
-      alert(response.message);
+      alert('Account Created');
       //   if (response.data.success === true) {
       //     navigate('/');
       //   }
