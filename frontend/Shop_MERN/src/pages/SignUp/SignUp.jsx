@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { RxAvatar } from 'react-icons/rx';
 import { server } from '../../server';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -35,13 +36,19 @@ const SignUp = () => {
         newForm,
         config
       );
-      console.log(response.data);
-      alert('Account Created');
+      if (response.data.success === true) {
+        toast.success('User Created');
+        setName('');
+        setEmail('');
+        setPassword('');
+        setAvatar();
+      }
+
       //   if (response.data.success === true) {
       //     navigate('/');
       //   }
     } catch (error) {
-      console.error('Error:', error);
+      toast.error(error.response.data.message);
     }
   };
 

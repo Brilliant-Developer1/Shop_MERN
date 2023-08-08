@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-// import { server } from '../../server';
+import { server } from '../../server';
 import axios from 'axios';
 
 const Activation = () => {
@@ -13,12 +13,9 @@ const Activation = () => {
       console.log('hitted');
       const sendRequest = async () => {
         try {
-          const res = await axios.post(
-            'http://localhost:8000/api/v2/user/activation',
-            {
-              url,
-            }
-          );
+          const res = await axios.post(`${server}/user/activation`, {
+            url,
+          });
           console.log(res.data);
         } catch (error) {
           console.error('Error activating account:', error.message);

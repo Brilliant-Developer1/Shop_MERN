@@ -1,4 +1,5 @@
 const app = require('./app');
+const cors = require('cors');
 const connectDatabase = require('./Database/Database');
 // const cloudinary = require('cloudinary');
 
@@ -17,6 +18,15 @@ if (process.env.NODE_ENV !== 'PRODUCTION') {
 
 // Database connect
 connectDatabase();
+
+// Configure CORS options
+const corsOptions = {
+  origin: 'http://localhost:5173',
+  credentials: true, // Allow cookies and authentication headers
+};
+
+// Use the CORS middleware with options
+app.use(cors(corsOptions));
 
 // server
 const server = app.listen(process.env.PORT, () => {
