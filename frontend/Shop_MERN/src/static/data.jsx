@@ -228,8 +228,7 @@ export const categoriesData = [
     id: 6,
     title: 'Gifts',
     subTitle: '',
-    image_Url:
-      'https://securecdn.pymnts.com/wp-content/uploads/2014/11/Gifts-Photo-700x489.jpg',
+    image_Url: 'https://picsum.photos/id/26/200/300',
   },
   {
     id: 7,
