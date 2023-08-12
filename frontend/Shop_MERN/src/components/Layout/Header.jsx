@@ -8,8 +8,10 @@ import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 import { useState } from 'react';
 import { categoriesData, productData } from '../../static/data';
 import DropDown from './DropDown';
+import Navbar from './Navbar';
 
-const Header = () => {
+// eslint-disable-next-line react/prop-types
+const Header = ({ activeHeading }) => {
   // const { allProducts } = useSelector((state) => state.products);
   const [searchTerm, setSearchTerm] = useState('');
   const [searchData, setSearchData] = useState(null);
@@ -93,9 +95,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div
-        className={`${styles.section} relative ${styles.noramlFlex} justify-between`}
-      >
+      <div className={` relative ${styles.noramlFlex} justify-between`}>
         {/* categories */}
         <div
           className={`${
@@ -120,6 +120,10 @@ const Header = () => {
                 setDropDown={setDropDown}
               />
             ) : null}
+          </div>
+          {/* Navbar */}
+          <div className={`${styles.noramlFlex}`}>
+            <Navbar active={activeHeading}></Navbar>
           </div>
         </div>
       </div>
