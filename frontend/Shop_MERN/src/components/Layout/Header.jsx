@@ -1,7 +1,11 @@
 import { Link } from 'react-router-dom';
 import styles from '../../styles/styles';
 import logo from '../../assets/images/homePage/Shop_logo.jpeg';
-import { AiOutlineSearch } from 'react-icons/ai';
+import {
+  AiOutlineHeart,
+  AiOutlineSearch,
+  AiOutlineShoppingCart,
+} from 'react-icons/ai';
 import { BiMenuAltLeft } from 'react-icons/bi';
 import { IoIosArrowDown, IoIosArrowForward } from 'react-icons/io';
 // import { useSelector } from 'react-redux';
@@ -9,6 +13,7 @@ import { useState } from 'react';
 import { categoriesData, productData } from '../../static/data';
 import DropDown from './DropDown';
 import Navbar from './Navbar';
+import { CgProfile } from 'react-icons/cg';
 
 // eslint-disable-next-line react/prop-types
 const Header = ({ activeHeading }) => {
@@ -17,6 +22,9 @@ const Header = ({ activeHeading }) => {
   const [searchData, setSearchData] = useState(null);
   const [active, setActive] = useState(false);
   const [dropDown, setDropDown] = useState(false);
+  //   const [openWishlist, setOpenWishlist] = useState(false);
+  //   const { wishlist } = useSelector(state => state.wishlist);
+  //   const [openCart, setOpenCart] = useState(false);
 
   const handleSearchChange = e => {
     const term = e.target.value;
@@ -124,6 +132,40 @@ const Header = ({ activeHeading }) => {
           {/* Navbar */}
           <div className={`${styles.noramlFlex}`}>
             <Navbar active={activeHeading}></Navbar>
+          </div>
+
+          <div className={`${styles.noramlFlex}`}>
+            <div className={`${styles.noramlFlex}`}>
+              <div
+                className="relative cursor-pointer mr-[15px]"
+                // onClick={() => setOpenWishlist(true)}
+              >
+                <AiOutlineHeart size={30} color="rgb(255 255 255 / 83%)" />
+                <span className="absolute right-0 top-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
+                  0
+                </span>
+              </div>
+            </div>
+
+            <div className={`${styles.noramlFlex}`}>
+              <div className="relative cursor-pointer mr-[15px]">
+                <AiOutlineShoppingCart
+                  size={30}
+                  color="rgb(255 255 255 / 83%)"
+                />
+                <span className="absolute right-0 top-0 rounded-full bg-[#3bc177] w-4 h-4 top right p-0 m-0 text-white font-mono text-[12px] leading-tight text-center">
+                  {/* {cart && cart.length} */} 3
+                </span>
+              </div>
+            </div>
+
+            <div className={`${styles.noramlFlex}`}>
+              <div className="relative cursor-pointer mr-[15px]">
+                <Link to="/login">
+                  <CgProfile size={30} color="rgb(255 255 255 / 83%)" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </div>
