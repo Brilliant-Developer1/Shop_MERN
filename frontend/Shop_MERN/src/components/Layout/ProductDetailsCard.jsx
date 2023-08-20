@@ -179,14 +179,14 @@ const ProductDetailsCard = ({ setOpen, data }) => {
 ProductDetailsCard.propTypes = {
   setOpen: PropTypes.func.isRequired,
   data: PropTypes.shape({
-    _id: PropTypes.string.isRequired,
+    // _id: PropTypes.string.isRequired,
     image_Url: PropTypes.arrayOf(
       PropTypes.shape({
         url: PropTypes.string.isRequired,
       })
     ),
     shop: PropTypes.shape({
-      _id: PropTypes.string.isRequired,
+      // _id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       shop_avatar: PropTypes.shape({
         url: PropTypes.string.isRequired,

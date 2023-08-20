@@ -1,4 +1,10 @@
-import { BestDeals, Categories, Header, Hero } from '../../routs';
+import {
+  BestDeals,
+  Categories,
+  FeaturedProduct,
+  Header,
+  Hero,
+} from '../../routs';
 
 const Home = () => {
   return (
@@ -7,6 +13,7 @@ const Home = () => {
       <Hero></Hero>
       <Categories></Categories>
       <BestDeals></BestDeals>
+      <FeaturedProduct></FeaturedProduct>
     </div>
   );
 };

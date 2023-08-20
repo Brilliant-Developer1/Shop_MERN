@@ -6,6 +6,8 @@ import Header from './components/Layout/Header.jsx';
 import Categories from './components/Layout/Categories.jsx';
 import BestDeals from './components/Layout/BestDeals.jsx';
 import ProductDetailsCard from './components/Layout/ProductDetailsCard.jsx';
+import FeaturedProduct from './components/Layout/FeaturedProduct.jsx';
+import ProductCard from './components/Layout/ProductCard.jsx';
 
 export {
   Login,
@@ -16,4 +18,6 @@ export {
   Categories,
   BestDeals,
   ProductDetailsCard,
+  FeaturedProduct,
+  ProductCard,
 };
