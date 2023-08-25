@@ -8,6 +8,7 @@ import BestDeals from './components/Layout/BestDeals.jsx';
 import ProductDetailsCard from './components/Layout/ProductDetailsCard.jsx';
 import FeaturedProduct from './components/Layout/FeaturedProduct.jsx';
 import ProductCard from './components/Layout/ProductCard.jsx';
+import Events from './components/Events/Events.jsx';
 
 export {
   Login,
@@ -20,4 +21,5 @@ export {
   ProductDetailsCard,
   FeaturedProduct,
   ProductCard,
+  Events,
 };
