@@ -9,6 +9,7 @@ import ProductDetailsCard from './components/Layout/ProductDetailsCard.jsx';
 import FeaturedProduct from './components/Layout/FeaturedProduct.jsx';
 import ProductCard from './components/Layout/ProductCard.jsx';
 import Events from './components/Events/Events.jsx';
+import Sponsored from './components/Layout/Sponsored.jsx';
 
 export {
   Login,
@@ -22,4 +23,5 @@ export {
   FeaturedProduct,
   ProductCard,
   Events,
+  Sponsored,
 };

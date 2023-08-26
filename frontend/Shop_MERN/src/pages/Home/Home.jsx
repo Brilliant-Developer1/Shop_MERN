@@ -5,6 +5,7 @@ import {
   FeaturedProduct,
   Header,
   Hero,
+  Sponsored,
 } from '../../routs';
 
 const Home = () => {
@@ -16,6 +17,7 @@ const Home = () => {
       <BestDeals></BestDeals>
       <Events></Events>
       <FeaturedProduct></FeaturedProduct>
+      <Sponsored></Sponsored>
     </div>
   );
 };

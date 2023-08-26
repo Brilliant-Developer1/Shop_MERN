@@ -17,10 +17,10 @@ const CountDown = () => {
     //   axios.delete(`${server}/event/delete-shop-event/${data._id}`);
     // }
     return () => clearTimeout(timer);
-  }, []);
+  });
 
   function calculateTimeLeft() {
-    const difference = +new Date('2024-08-02') - +new Date();
+    const difference = +new Date('2023-12-02') - +new Date();
     let timeLeft = {};
 
     if (difference > 0) {
