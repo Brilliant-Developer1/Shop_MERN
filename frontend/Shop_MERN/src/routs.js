@@ -10,6 +10,7 @@ import FeaturedProduct from './components/Layout/FeaturedProduct.jsx';
 import ProductCard from './components/Layout/ProductCard.jsx';
 import Events from './components/Events/Events.jsx';
 import Sponsored from './components/Layout/Sponsored.jsx';
+import Footer from './components/Layout/Footer.jsx';
 
 export {
   Login,
@@ -24,4 +25,5 @@ export {
   ProductCard,
   Events,
   Sponsored,
+  Footer,
 };

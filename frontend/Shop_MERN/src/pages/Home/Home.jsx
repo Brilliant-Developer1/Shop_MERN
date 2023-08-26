@@ -3,6 +3,7 @@ import {
   Categories,
   Events,
   FeaturedProduct,
+  Footer,
   Header,
   Hero,
   Sponsored,
@@ -18,6 +19,7 @@ const Home = () => {
       <Events></Events>
       <FeaturedProduct></FeaturedProduct>
       <Sponsored></Sponsored>
+      <Footer></Footer>
     </div>
   );
 };
