@@ -1,6 +1,7 @@
 import {
   BestDeals,
   Categories,
+  Events,
   FeaturedProduct,
   Header,
   Hero,
@@ -13,6 +14,7 @@ const Home = () => {
       <Hero></Hero>
       <Categories></Categories>
       <BestDeals></BestDeals>
+      <Events></Events>
       <FeaturedProduct></FeaturedProduct>
     </div>
   );
